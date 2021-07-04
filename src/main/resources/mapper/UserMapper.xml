@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hbnu.mapper.UserMapper">
+
+    <resultMap id="BaseResultMap" type="com.hbnu.entity.User">
+        <id column="user_id" jdbcType="INTEGER" property="userId" />
+        <result column="username" jdbcType="VARCHAR" property="username" />
+        <result column="nick_name" jdbcType="VARCHAR" property="nickName" />
+        <result column="password" jdbcType="VARCHAR" property="password" />
+        <result column="email" jdbcType="VARCHAR" property="email" />
+        <result column="mobile" jdbcType="VARCHAR" property="mobile" />
+        <result column="last_login_ip" jdbcType="VARCHAR" property="lastLoginIp" />
+        <result column="last_login_time" jdbcType="DATE" property="lastLoginTime" />
+        <result column="sex" jdbcType="INTEGER" property="ssex" />
+        <result column="description" jdbcType="VARCHAR" property="description" />
+        <result column="avatar" jdbcType="VARCHAR" property="avatar" />
+        <result column="school" jdbcType="VARCHAR" property="school" />
+        <result column="dep_id" jdbcType="INTEGER" property="depId" />
+        <result column="create_time" jdbcType="DATE" property="createTime" />
+        <result column="modify_time" jdbcType="DATE" property="modifyTime" />
+        <result column="status" jdbcType="INTEGER" property="status" />
+        <result column="birthday" jdbcType="DATE" property="birthday" />
+        <result column="role_id" jdbcType="INTEGER" property="roleId" />
+    </resultMap>
+
+    <select id="queryDoctorUser" resultType="com.hbnu.entity.User">
+        select u.*,d.dep_name as depName from t_user u left join t_department d
+        on u.dep_id=d.id
+        <where>
+            u.role_id = 1
+            <if test="user.username!=null and user.username!=''">
+                and u.username like concat('%',#{user.username,jdbcType=VARCHAR},'%')
+            </if>
+            <if test="user.mobile!=null and user.mobile!=''">
+                and u.mobile like concat('%',#{user.mobile,jdbcType=VARCHAR},'%')
+            </if>
+            <if test="queryRequest.beginTime != null and queryRequest.beginTime !=''
+                and queryRequest.endTime!=null and queryRequest.endTime!='' ">
+                and u.create_time between #{queryRequest.beginTime,jdbcType=VARCHAR}
+                and #{queryRequest.endTime,jdbcType=VARCHAR}
+            </if>
+            <if test="user.depId !=null and user.depId !=''">
+                and u.dep_id = #{user.depId,jdbcType=INTEGER}
+            </if>
+            group by u.user_id
+            order by u.create_time desc
+        </where>
+    </select>
+
+
+</mapper>

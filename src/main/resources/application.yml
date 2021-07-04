@@ -1,0 +1,66 @@
+spring:
+  #配置数据源，druid数据源和监控页
+  datasource:
+    url: jdbc:mysql://localhost:3306/hospital?
+      serverTimezone=GMT&useSSL=false&characterEncoding=utf-8
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+    druid:
+      #开启监控和防火墙功能
+      filters: stat,wall
+
+      #设置单个filter功能细节
+      filter:
+        wall:
+          config:
+            drop-table-allow: false
+
+      #监控页的配置,登录信息
+      stat-view-servlet:
+        enabled: true
+        login-username: admin
+        login-password: 123456789
+
+      #配置监控页中的Web应用
+      web-stat-filter:
+        enabled: true
+        url-pattern: /*
+        exclusions: '*.js,*.jpg,*.css,/druid/*'
+
+      #开启监控页中的spring监控功能，监控spring这个包下的所有组件
+      aop-patterns: world.keyi.*
+
+
+  #配置请求方式转换过滤器
+  mvc:
+    hiddenmethod:
+      filter:
+        enabled: true
+
+#tomcat端口信息,项目访问目录
+server:
+  port: 8081
+#  servlet:
+#    context-path: /src/views
+
+#绑定跨域信息
+cors:
+  origin: '*'
+  credentials: true
+  headers: '*'
+  methods: '*'
+  maxAge: 3600
+  path: '/**'
+
+#mybatis配置信息
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+
+# 打印sql
+logging:
+  level:
+    world.keyi.arsystem.mapper: debug

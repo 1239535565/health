@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b0751505-7fe6-4c1a-956a-5c0b4b60b084" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="1uNqT5FxAUFsqA4TJgsMMuMbMFP" />
+  <component name="ProjectViewState">
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$/IdeaProjects/demo" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="$PROJECT_DIR$/../../../skyeagle/Documents/WeChat Files/wxid_do5or6hwwb3e22/FileStorage/File/2021-06/医院预约挂号系统前后端分离版/dandp_new/frontend/node_modules/eslint" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\skyeagle\Documents\WeChat Files\wxid_do5or6hwwb3e22\FileStorage\File\2021-06\医院预约挂号系统前后端分离版\dandp_new\frontend\node_modules\prettier" />
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b0751505-7fe6-4c1a-956a-5c0b4b60b084" name="Default Changelist" comment="" />
+      <created>1624193359682</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1624193359682</updated>
+      <workItem from="1624193361906" duration="947000" />
+      <workItem from="1624407274588" duration="2127000" />
+      <workItem from="1624410444506" duration="2439000" />
+      <workItem from="1624516436695" duration="847000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="747" y="197" key="FileChooserDialogImpl" timestamp="1624516517973">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="747" y="197" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1624516517973" />
+    <state x="479" y="266" key="com.intellij.ide.util.TipDialog" timestamp="1624516439733">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="479" y="266" key="com.intellij.ide.util.TipDialog/0.0.1600.860@0.0.1600.860" timestamp="1624516439733" />
+    <state x="337" y="146" key="new project wizard" timestamp="1624516695313">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="337" y="146" key="new project wizard/0.0.1600.860@0.0.1600.860" timestamp="1624516695313" />
+  </component>
+</project>
